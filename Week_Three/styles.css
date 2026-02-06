@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: #f8f8f8;
+    color: #333333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Header styling */
+header {
+    background-color: #5b2d8b;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header p {
+    font-style: italic;
+}
+
+/* Navigation bar */
+nav {
+    margin: 15px 0;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5b2d8b;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #0e0e0e;
+}
+
+/* Sections */
+section, aside {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px #cccccc;
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #5b2d8b;
+    margin-bottom: 10px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+table, th, td {
+    border: 1px solid #5b2d8b;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Form styling */
+form label {
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background-color: #5b2d8b;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0e0e0e;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    padding: 10px;
+    background-color: #5b2d8b;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
