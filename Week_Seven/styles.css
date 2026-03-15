@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background: #4b0082;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER SECTION */
+.header_section {
+  text-align: center;
+}
+
+/* SECTIONS */
+section {
+  background: white;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* About Section */
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#about img {
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0;
+  border-radius: 8px;
+}
+
+/* Lists */
+#services ul,
+#services ol {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #4b0082;
+}
+
+th {
+  background-color: #4b0082;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* MEDIA SECTION */
+video,
+audio {
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+/* ASIDE */
+aside {
+  background: white;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  border-left: 5px solid #4b0082;
+  border-radius: 8px;
+}
+
+/* CONTACT LINKS */
+#contact a {
+  color: #4b0082;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  background: #4b0082;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* BOOKING PAGE */
+
+form {
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"],
+form input[type="date"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+form input[type="submit"] {
+  margin-top: 20px;
+  padding: 10px;
+  background: #4b0082;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background: black;
+}
+
+/* Booking Back Link */
+body > a {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  color: #4b0082;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+body > a:hover {
+  text-decoration: underline;
+}
+
+/* CONFIRMATION PAGE */
+
+body > h1 {
+  text-align: center;
+  margin-top: 80px;
+  color: #4b0082;
+  font-size: 32px;
+}
+
+body > p {
+  text-align: center;
+  margin: 10px auto;
+  width: 80%;
+  max-width: 600px;
+  font-size: 18px;
+}
+
+/* Confirmation Button Style */
+body > a {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section,
+  aside {
+    width: 95%;
+  }
+
+  form {
+    width: 95%;
+  }
+}
+
+/* Mobile (480px) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  body > h1 {
+    font-size: 22px;
+  }
+
+  section,
+  aside {
+    padding: 15px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  table,
+  th,
+  td {
+    font-size: 14px;
+  }
+}
+
+#mockups {
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  color: #4b0082;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.book-btn {
+  background: #4b0082;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-btn:hover {
+  background: black;
+}
+
+/* TESTIMONIAL SECTION */
+
+#testimonials {
+  text-align: center;
+}
+
+.testimonial-box {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+#next-testimonial {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #4b0082;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
