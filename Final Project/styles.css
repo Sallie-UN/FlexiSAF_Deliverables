@@ -1,0 +1,228 @@
+:root {
+  --plum: #4a182c;
+  --sapphire: #1a2a3a;
+  --emerald: #003322;
+  --gold: #caae5c;
+  --ivory: #f9f5eb;
+  --glass: rgba(255, 255, 255, 0.05);
+  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background: radial-gradient(
+    circle at top right,
+    var(--plum),
+    var(--sapphire),
+    #000
+  );
+  color: var(--ivory);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-blobs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(80px);
+  opacity: 0.4;
+}
+
+.screen {
+  display: none;
+  width: 90vw;
+  max-width: 600px;
+  animation: fadeIn 0.5s forwards;
+}
+
+.screen.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.glass-card {
+  background: var(--glass);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+/* UI Elements */
+.logo {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.logo span {
+  color: var(--gold);
+  font-weight: 300;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--gold);
+  color: var(--ivory);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  outline: none;
+}
+
+.mode-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+.mode-btn {
+  padding: 10px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--ivory);
+  cursor: pointer;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+.mode-btn.active {
+  background: var(--gold);
+  color: #000;
+  border-color: var(--gold);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 1.2rem;
+  background: var(--gold);
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  filter: brightness(1.2);
+}
+
+/* Quiz Interface */
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.progress-container {
+  flex-grow: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.timer-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+}
+
+.timer-svg {
+  transform: rotate(-90deg);
+}
+#timer-path-remaining {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 5px;
+  stroke-dasharray: 283;
+}
+
+#timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.options-grid {
+  display: grid;
+  gap: 15px;
+  margin-top: 2rem;
+}
+.option-card {
+  background: var(--glass);
+  padding: 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+  display: flex;
+  justify-content: space-between;
+}
+
+.option-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(10px);
+}
+.option-card.correct {
+  background: var(--emerald);
+  border-color: #00ff88;
+}
+.option-card.wrong {
+  background: var(--plum);
+  border-color: #ff4444;
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+/* Review System */
+.review-area {
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 1.5rem 0;
+  text-align: left;
+  padding-right: 10px;
+}
+.review-item {
+  padding: 10px;
+  border-bottom: 1px solid var(--glass);
+  font-size: 0.9rem;
+}

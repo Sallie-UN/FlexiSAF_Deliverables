@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIE QUIZZZ</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="background-blobs"></div>
+
+    <main class="app-container">
+      <section id="start-screen" class="screen active">
+        <h1 class="logo">AIE QUIZZZ <span>X PRO</span></h1>
+        <div class="glass-card">
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter your nickname..."
+            maxlength="15"
+          />
+          <div class="mode-selector">
+            <button class="mode-btn active" data-mode="normal">Normal</button>
+            <button class="mode-btn" data-mode="speed">Speed</button>
+            <button class="mode-btn" data-mode="survival">Survival</button>
+          </div>
+          <button id="start-btn" class="btn-primary gold-glow">
+            Initialize Experience
+          </button>
+        </div>
+      </section>
+
+      <section id="quiz-screen" class="screen">
+        <header class="quiz-header">
+          <div class="stat-item">
+            <i class="fas fa-fire"></i> <span id="streak">0</span>
+          </div>
+          <div class="progress-container">
+            <div id="progress-bar"></div>
+          </div>
+          <div class="stat-item gold-text">
+            <i class="fas fa-coins"></i> <span id="score">0</span>
+          </div>
+        </header>
+
+        <div class="timer-wrapper">
+          <svg class="timer-svg" viewBox="0 0 100 100">
+            <circle class="timer-path-gray" cx="50" cy="50" r="45"></circle>
+            <circle id="timer-path-remaining" cx="50" cy="50" r="45"></circle>
+          </svg>
+          <span id="timer-text">10</span>
+        </div>
+
+        <div class="question-box">
+          <h2 id="question-text">Loading the challenge...</h2>
+          <div id="options-grid" class="options-grid"></div>
+        </div>
+      </section>
+
+      <section id="result-screen" class="screen">
+        <div class="glass-card result-card">
+          <h2 id="result-status">Mission Accomplished</h2>
+          <div class="final-score-display">
+            <span id="final-score">0</span>
+            <label>Total Points</label>
+          </div>
+          <div class="stats-summary">
+            <div class="summary-item">
+              Accuracy: <span id="accuracy-val">0%</span>
+            </div>
+            <div class="summary-item">
+              Best Streak: <span id="best-streak-val">0</span>
+            </div>
+          </div>
+          <div class="review-area" id="review-area"></div>
+          <button onclick="location.reload()" class="btn-primary">
+            Restart Engine
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <audio
+      id="snd-correct"
+      src="https://assets.mixkit.co/active_storage/sfx/2000/2000-preview.mp3"
+    ></audio>
+    <audio
+      id="snd-wrong"
+      src="https://assets.mixkit.co/active_storage/sfx/2005/2005-preview.mp3"
+    ></audio>
+    <audio
+      id="snd-click"
+      src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3"
+    ></audio>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
