@@ -1,0 +1,93 @@
+:root {
+  --primary-color: #4a182c;
+  --secondary-color: #ccc;
+  --dark-text: #023047;
+  --light-bg: #f8f9fa;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  border-top: 8px solid var(--primary-color);
+}
+
+h1 {
+  color: var(--dark-text);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 6px;
+  outline: none;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.output-area {
+  background: #f1f1f1;
+  padding: 1.5rem;
+  border-radius: 8px;
+  position: relative;
+  min-height: 100px;
+}
+
+#output {
+  line-height: 1.6;
+  color: var(--dark-text);
+  white-space: pre-line;
+}
+
+#copyBtn {
+  margin-top: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--dark-text);
+  font-size: 0.8rem;
+}
